@@ -19,11 +19,11 @@ return new class extends Migration
             $table->string('cep')->nullable();
             $table->string('uf')->nullable();
             $table->string('city')->nullable();
-            $table->string('end')->nullable();
-            $table->string('num')->nullable();
-            $table->string('comp')->nullable();
-            $table->string('bairro')->nullable();
-            $table->string('ref')->nullable();
+            $table->string('address')->nullable();
+            $table->string('number')->nullable();
+            $table->string('complement')->nullable();
+            $table->string('neighborhood')->nullable();
+            $table->string('reference')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

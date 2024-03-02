@@ -27,13 +27,14 @@ class User extends Authenticatable implements JWTSubject
         'cep',
         'uf',
         'city',
-        'end',
-        'num',
-        'comp',
-        'bairro',
-        'ref',
+        'address',
+        'number',
+        'complement',
+        'neighborhood',
+        'reference',
     ];
 
+    
     /**
      * The attributes that should be hidden for serialization.
      *

@@ -9,7 +9,6 @@ Route::middleware('api')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::post('/login', [AuthController::class, 'login']);
-// Route::post('/register', [RegisterController::class, 'register']);
 Route::get('/register/edit/{id}', [RegisterController::class, 'getRegister']);
 Route::post('/register/edit', [RegisterController::class, 'updateDataUser']);
 

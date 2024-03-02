@@ -11,13 +11,13 @@ class AuthController extends Controller
         $credentials = $request->only(['email', 'password']);
         if(!$token = auth()->attempt($credentials))
         {
-            abort(401, 'Unauthorized');
+            abort(401, 'Não autorizado.');
         }
 
         $user = User::where('email', $request->email)->first();
 
         if (!$user) {
-            abort(404, 'User not found');
+            abort(404, 'Usuário não encontrado.');
         }
     
         return response()->json([

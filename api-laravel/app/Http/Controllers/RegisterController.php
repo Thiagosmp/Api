@@ -22,20 +22,14 @@ class RegisterController extends Controller
         $register->cep = $request->input('cep');
         $register->uf = $request->input('uf');
         $register->city = $request->input('city');
-        $register->end = $request->input('end');
-        $register->num = $request->input('num');
-        $register->comp = $request->input('comp');
-        $register->bairro = $request->input('bairro');
-        $register->ref = $request->input('ref');
+        $register->address = $request->input('address');
+        $register->number = $request->input('number');
+        $register->complement = $request->input('complement');
+        $register->neighborhood = $request->input('neighborhood');
+        $register->reference = $request->input('reference');
         $register->save();
 
         return ['validade' => true, 'msg' => 'Salvo com sucesso.'];
-    }
-
-    public function getRegister($id)
-    {
-        $register = User::find($id);
-        return [$register];
     }
 }
 
